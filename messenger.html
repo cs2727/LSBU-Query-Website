@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Intellectual Propperty inquiries</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<table class="table">
+  <tbody style="width:200px" >
+  {%for form in forms%}
+
+    <tr >
+      <td style="width:40%">
+<b style="color:grey;"> <font size="5" >
+Name: </b></font>
+
+<b style="color:black;"> <font size="5" >
+{{form.name}}</b></font><br><br>        
+
+      </td>
+    </tr>
+
+    <tr >
+      <td>
+<b style="color:grey;"> <font size="5" >
+Student Number: </b></font>
+
+<b style="color:black;"> <font size="5" >
+{{form.student_number}}</b></font><br><br>       
+</tf>
+
+
+    </tr>
+
+
+    <tr >
+      <td>
+<b style="color:grey;"> <font size="5" >
+Email address: </b></font>
+
+<b style="color:black;"> <font size="5" >
+{{form.email_address}}</b></font><br><br>     
+
+      </td>
+
+<td>
+  <b style="color:grey;"> <font size="5" >
+Intellectual property: </b></font>
+<b style="color:black;"> <font size="5" >
+{{form.intellectual_property}}</b></font><br><br>
+
+      </td>
+
+
+
+    </tr>
+    <tr >
+      <td>
+<b style="color:grey;"> <font size="5" >
+Course: </b></font><b style="color:black;"> <font size="5" >
+{{form.course}}</b></font><br><br>   
+
+      </td>
+
+<td>
+<b style="color:grey;"> <font size="5" >
+Action: </b></font>
+<b style="color:black;"> <font size="5" >
+{{form.ip_action}}</b></font><br><br>
+
+      </td>
+
+    </tr>
+
+    </tr>
+    <tr >
+      <td>
+<b style="color:grey;"> <font size="5" >
+School: </b></font>
+<b style="color:black;"> <font size="5" >
+{{form.school}}</b></font><br><br> 
+
+      </td>
+
+<td>
+<b style="color:grey;"> <font size="5" >
+Authors: </b></font>
+<b style="color:black;"> <font size="5" >
+{{form.ip_authors}}</b></font><br><br><br>
+
+      </td>
+
+
+
+    </tr>
+
+
+    <tr >
+      <td>
+<b style="color:grey;"> <font size="5" >
+Year of study: </b></font>
+<b style="color:black;"> <font size="5" >
+{{form.year_of_study}}</b></font><br><br>
+
+      </td>
+
+<td>
+<b style="color:grey;"> <font size="5" >
+Query: </b></font>
+<b style="color:black;"> <font size="5" >
+{{form.ip_issue}}</b></font><br><br>
+
+      </td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+<form method ="POST" action="{% url 'mes_sec' form.id%}">{%csrf_token%}
+<b style="color:grey;"> <font size="4" ></font>
+</b>
+
+<h4></b><textarea rows="4" cols="50"  placeholder="Enter messege" name ="text"/></textarea> </h4>
+
+<br></br>
+<font size= 5><input type="submit" class="btn-primary" value="Submit"/>
+</font>
+</form>
+{%endfor%}
+
+<br>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

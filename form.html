@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-CSompatible" content="ie-edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Muli" rel="stylesheet">
+    <title>Form | London South Bank University</title>
+  </head>
+  <body>
+    <nav>
+    <a class="logo-container" href="index.html"><span>Logo</span></a>
+
+
+
+    <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="form.html">Query Form</a></li>
+    <li><a href="answer.html">Answered Queries</a></li>
+    </ul>
+    </nav>
+
+
+<div class="main-container">
+  <div class="second-container">
+
+
+      <div class="text">
+      <h1>Query Form</h1>
+      <hr size="2px" noshade/>
+      <p>Do you have a IP related query that needs to be answered urgently, fill in the sections below!</p>
+      </div>
+
+
+<form method ="POST" action="{% url 'insert_form' %}">{%csrf_token%}
+
+
+
+
+      <input type="text" placeholder="Enter name" name ="name" required/>
+
+      <input type="text" placeholder="Enter student number" name ="student_number"/>
+
+      <input type="text" placeholder="Enter email address" name ="email_address"/>
+
+      <input type="text" placeholder="Enter course" name ="course"/>
+
+      <select name="school">
+      <option>School</option>
+      <option value="trade">Applied Sciences</option>
+      <option value="mark">Arts and Creative Industries</option>
+      <option value="copyright">The Built Environment and Architecture</option>
+      <option value="patent">Business</option>
+      </select>
+
+      <select name="year_of_study">
+      <option>Year of study</option>
+      <option value="first">First</option>
+      <option value="second">Second</option>
+      <option value="third">Third</option>
+      <option value="masters">Masters</option>
+      <option value="phd">PhD</option>
+      <option value="alumni">Alumni</option>
+      </select>
+
+      <select name="intellectual_property">
+      <option>What do you think is the Intellectual property in your idea?</option>
+      <option value="New software">New software</option>
+      <option value="Brand name">Brand name</option>
+      <option value="Logo design">Logo design</option>
+      <option value="New technology">New technology</option>
+      <option value="Designed a new product">Designed a new product</option>
+      <option value="New music">New music</option>
+      <option value="New video">New video</option>
+      <option value="New film">New film</option>
+      <option value="I don't know">I don't know</option>
+      </select>
+
+      <input type="text" placeholder="Anything you doing with your IP now?" name ="ip_action"/>
+
+
+      <input type="text" placeholder="Who are the IP authors?" name ="ip_authors"/>
+
+      <input type="text" placeholder="Enter Intellectual Property" name ="intellectual_property"/>
+
+      <textarea placeholder="Enquiry details please" name="ip_issue"/></textarea>
+
+
+<br>
+<br>
+
+      <input type="submit" class="btn btn-info" value="Submit">
+
+
+      </form>
+    </div>
+  </div>
+  </body>
+</html>

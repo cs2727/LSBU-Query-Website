@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Intellectual Property inquiries</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<form method ="POST" action="{% url 'insert_form' %}">{%csrf_token%}
+
+<h4> <b> Fileter by Status </b> </h4>
+<select class="form" name="status">
+ <option value="pending"><font size=5>Pending</font></option>
+<option value="ongoing">Ongoing</option>
+
+  <option value="resolved">Resolved</option>
+  <option value="all">All</option>
+</select>
+<input class="btn-primary" type ="submit" value="Show results"></form>
+
+<br>
+<br>
+
+  
+
+
+<table class="table">
+  <tbody style="width:200px" >
+    <tr >
+      <td style="width:10%"><b><font size="5">Name</font></td>
+      <td style="width:5%"><b><font size="5">Student ID</font></td>
+      <td style="width:10%"><b><font size="5">Course</font></td>
+      <td style="width:10%"><b><font size="5">School</font></td>
+      <td style="width:5%"><b><font size="5">Year</font></td>
+      <td style="width:5%"><b><font size="5">Type of IP</font></td>
+
+    </tr>
+    {%for form in forms%} 
+    {%if form.status == "pending"%}
+    <tr bgcolor="#FEDBD2">
+      {%elif form.status == "ongoing" %}
+    <tr bgcolor="#FBEAC1">
+     {%elif form.status == "resolved"%}
+    <tr bgcolor="#E6FBC1"> 
+     {%endif%}      
+      <td style="width:10%"><font size="5">{{form.name}}</font></td>
+      <td style="width:5%"><font size="5">{{form.student_number}}</font></td>
+      <td style="width:10%"><font size="5">{{form.course}}</font></td>
+
+      <td style="width:10%"><font size="5">{{form.school}}</font></td>
+      <td style="width:5%"><font size="5">{{form.year_of_study}}</font></td>
+      <td style="width:5%"><font size="5">{{form.intellectual_property}}</font></td>
+      
+
+      <td style="width:5%"><font size="5"></font>
+
+
+
+<form method ="POST" action="{% url 'insert_form' %}">{%csrf_token%}
+<input type="hidden"  name="the_id" value="{{form.id}}">
+
+<select class="form" name="new_stat">
+ <option value="pending"><font size=5>Pending</font></option>
+<font size="5"><option value="ongoing">Ongoing</option></font>
+
+  <option value="resolved">Resolved</option>
+</select>
+
+
+<td style="width:5%"><font size="5"><input class="btn-primary" type ="submit" value="Change"></form></td>
+
+
+      <td style="width: 3%"><font size="5">
+        <form method ="POST" action="{% url 'messenger' form.id%}" target="_blank">{%csrf_token%} <input class="btn-primary" type ="submit" value="Reply"></form>  </font></td>
+
+    </tr>
+          
+    {%endfor%}
+
+  </tbody>
+</table>
+
+
+
+<br>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

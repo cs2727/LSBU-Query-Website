@@ -1,0 +1,459 @@
+/* Index Page style sheet */
+/* Default properities*/
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color:#ffff;
+  background-color:#E7E6E6;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+h1,h2,h3 {
+  margin:0;
+  padding:0;
+}
+
+hr {
+  margin:0;
+}
+
+ul {
+  padding:0;
+}
+
+/* Logo */
+
+a.logo-container {
+  width:198px; height:102px;
+  background: url('../images/lsbuwhite.png') no-repeat;
+  margin-bottom:15px;
+}
+
+a.logo-container span {
+  display:none;
+}
+
+/* Navigation links including the link pages */
+
+nav {
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-end;
+  height: 150px;
+  background-color: #333333;
+  box-shadow: 0 4px 2px -2px gray;
+  overflow:visible;
+  position:relative;
+}
+
+/* Navigation main page directories */
+nav ul.nav-links {
+
+  display:flex;
+  justify-content:space-around;
+  width:30%;
+  margin-left:300px;
+  margin-bottom:5px;
+}
+
+nav ul.nav-links li {
+list-style:none;
+}
+
+nav ul.nav-links li a{
+  color:#ffff;
+  text-decoration:none;
+  font-size:1.0rem;
+  font-family: 'Fira Sans', sans-serif;
+  text-transform:uppercase;
+
+}
+
+.cool-links::after {
+  content:' ';
+  display: block;
+  width:0;
+  height:2px;
+  background:#10A48D;
+  transition: width .3s;
+}
+
+.cool-links:hover::after {
+  width:100%;
+  transition: width .3s;
+}
+
+
+
+
+/* First Section - Image */
+
+section.container-1 {
+  position:relative;
+  height:550px;
+  background: url('../images/southbank2.jpg') no-repeat center bottom;;
+  background-size:cover;
+  margin-bottom:20px;
+
+}
+
+section.container-1 div.smll-box {
+  position:absolute;
+  bottom:0px;
+  left:42%;
+  width:20%;
+  height:30px;
+  background-color:#E7E6E6;
+  border:2px solid #333333;
+
+
+}
+
+section div.smll-box h1 {
+  font-size:1.6rem;
+  color:#10A48D;
+  text-align:center;
+}
+
+/* Second Section */
+
+section.container-2{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  height:530px;
+  background-color:#E7E6E6;
+  margin-bottom:30px;
+}
+
+/* Pre-defined styles for second section*/
+section.container-2 div {
+  height:500px;
+  width:35%;
+  background-color:#ffff;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 2px 2px 2px #888888;
+  text-align:center;
+  font-family:'Fira Sans', sans-serif;
+  overflow:hidden;
+}
+
+
+section.container-2 a{
+  display:block;
+  color:#000000;
+  margin-top:10px;
+  text-decoration:none;
+  height:45px;
+  margin:10px 50px;
+  font-size:0.9rem
+}
+
+section.container-2 a:hover{
+  color:#10A48D;
+}
+
+section.container-2 h2{
+  color:#10A48D;
+  height:40px;
+  padding-top:10px;
+  margin:0;
+  background-color:#333333;
+}
+/* first Item */
+
+section div.image-1{
+  background: url('../images/studentsmiling.jpg') no-repeat;
+  width:100%;
+  height:395px;
+  background-size:cover;
+  margin-top:10px;
+}
+
+/* Second Item */
+
+
+section div.image-2 {
+  background: url('../images/studentsmiling2.jpg') no-repeat center center;
+  background-size:cover;
+  height:395px;
+  width:100%;
+  margin-top:10px;
+}
+
+/* Third Section */
+
+section.container-3 {
+height:250px;
+background-color:#E7E6E6;
+
+
+}
+
+section div.mini-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:250px;
+  width:65%;
+  background-color:#E7E6E6;
+  margin:0 auto;
+
+}
+section div.syeda-information{
+  height:200px;
+  width:20%;
+  background-color:#E7E6E6;
+  box-shadow:none;
+  text-align:left;
+  border-radius:0px;
+}
+
+section a.syeda-img{
+  border-radius:100%;
+  width:154px; height:154px;
+  background: url('../images/syeda.jpg') no-repeat;
+  background-size:cover;
+  margin-right:30px;
+  margin-bottom:35px;
+
+}
+
+section div.mini-container a{
+  display:inline-block;
+
+}
+section div.mini-container a:hover{
+  opacity:0.2;
+}
+
+section a.syeda-img span {
+  display:none;
+}
+
+section.container-3 h1{
+  color:#10A48D;
+  font-family:'Fira Sans', sans-serif;
+
+}
+
+section.container-3 h3 {
+  color:#10A48D;
+  font-family:'Fira Sans', sans-serif;
+  font-size:1.1rem;
+  font-weight:normal;
+
+}
+
+section.container-3 ul {
+  margin-top:2px;
+}
+
+section.container-3 ul li{
+  margin:5px 5px;
+  list-style:none;
+  color:#000000;
+  font-family:'Fira Sans', sans-serif;
+  font-size:0.9rem;
+
+}
+
+/* Fourth Section */
+
+
+section.container-4 {
+  display:flex;
+  height:600px;
+  position:relative;
+}
+
+section div.mini-1{
+width:50%;
+background: url('../images/inside.jpg') no-repeat center bottom;
+background-size:cover;
+margin: 20px 20px;
+
+}
+
+section div.mini-2 {
+  position:absolute;
+  top:150px;
+  right:150px;
+  background-color:#333333;
+  width:30%;
+  height:240px;
+  padding:20px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+section.container-4 h1 {
+  color:#10A48D;
+}
+
+section.container-4 h3 {
+  font-weight:bold;
+  color:#ffff;
+}
+
+section.container-4 p {
+  font-size:0.9rem;
+  font-weight:normal;
+}
+
+section.container-4 a.smll-btn {
+  position:absolute;
+  left:290px;
+  display:inline-block;
+  width:100px; height:30px;
+  background-color:#FF5733;
+  margin-top:15px;
+}
+
+section.container-4 a{
+  text-decoration:none;
+  font-family:'Fira Sans', sans-serif;
+  font-weight:bold;
+  color:#ffff;
+  padding-top:10px;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:center;
+}
+
+section.container-4 a:hover{
+  opacity:0.2;
+  border:2px solid #ffff;
+}
+
+
+/* Footer */
+
+footer {
+display:flex;
+height:320px;
+background-color:#333333;
+position:relative;
+}
+
+footer ul{
+margin-left:150px;
+}
+
+footer ul h1, h2 {
+  color:#10A48D;
+}
+
+footer ul li{
+  list-style:none;
+  margin-top:10.5px;
+}
+
+footer ul li a{
+  text-decoration:none;
+  font-family:'Fira Sans', sans-serif;
+  color:#ffffff;
+
+}
+footer ul li a:hover {
+  text-decoration:underline;
+}
+
+
+
+footer a span {
+  display:none;
+}
+
+
+/* Awards */
+
+footer div.awardcontainer {
+  margin-left:180px;
+  margin-top:30px;
+}
+
+
+footer div.awardcontainer a{
+  margin-right:30px;
+}
+
+footer a.thetimes {
+  display:inline-block;
+  width:96px;
+  height:127px;
+  background:url('../images/the_times.png') no-repeat;
+}
+
+footer a.tef {
+  display:inline-block;
+  width:130px;
+  height:48px;
+  background:url('../images/tef.png') no-repeat;
+}
+
+footer a.awards {
+  display:inline-block;
+  width:122px;
+  height:85px;
+  background:url('../images/THEawards.png') no-repeat;
+}
+
+
+/* Social Media */
+
+footer div.mediacontainer{
+display:flex;
+height:200px;
+width:200px;
+position:absolute;
+top:80px;
+right:300px;
+}
+
+
+footer div.smedia {
+  display:flex;
+  justify-content:center;
+  height:66px;
+  width:80px;
+  background-color:#ff9933;
+  margin-right:30px;
+  padding:10px 10px;
+  border-radius:20px;
+}
+
+footer a.facebook {
+  display:inline-block;
+  width:64px; height:64px;
+  background: url('../images/facebook.png') no-repeat;
+
+}
+
+footer a.instagram {
+  display:inline-block;
+  width:64px; height:64px;
+  background: url('../images/instagram.png') no-repeat;
+
+
+}
+
+footer a.twitter{
+  display:inline-block;
+  width:64px; height:64px;
+  background: url('../images/twitter.png') no-repeat;
+
+}
+
+footer a.youtube{
+  display:inline-block;
+  width:64px; height:64px;
+  background: url('../images/youtube.png') no-repeat;
+
+}
+
+footer a:hover {
+  opacity:0.5;
+}

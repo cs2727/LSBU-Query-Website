@@ -1,0 +1,144 @@
+/* Index Page style sheet */
+/* Default properities*/
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color:#E7E6E6;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+h1,h2,h3 {
+  margin:0;
+  padding:0;
+}
+
+hr {
+  margin:0;
+}
+
+ul {
+  padding:0;
+}
+
+/* Logo */
+
+a.logo-container {
+  width:198px; height:102px;
+  background: url('../images/lsbuwhite.png') no-repeat;
+  margin-bottom:15px;
+}
+
+
+a.logo-container span {
+  display:none;
+}
+
+/* Navigation links including the link pages */
+nav {
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-end;
+  height: 150px;
+  background-color: #333333;
+  box-shadow: 0 4px 2px -2px gray;
+  overflow:visible;
+  position:relative;
+}
+
+/* Navigation main page directories */
+nav ul.nav-links {
+
+  display:flex;
+  justify-content:space-around;
+  width:30%;
+  margin-left:300px;
+  margin-bottom:5px;
+}
+
+nav ul.nav-links li {
+list-style:none;
+}
+
+nav ul.nav-links li a{
+  color:#ffff;
+  text-decoration:none;
+  font-size:1.0rem;
+  font-family: 'Fira Sans', sans-serif;
+  text-transform:uppercase;
+
+}
+
+.cool-links::after {
+  content:' ';
+  display: block;
+  width:0;
+  height:2px;
+  background:#10A48D;
+  transition: width .3s;
+}
+
+.cool-links:hover::after {
+  width:100%;
+  transition: width .3s;
+}
+
+/* Form */
+
+div.main-container{
+}
+
+ div.second-container{
+   position:relative;
+  margin:10px auto;
+  height:800px;
+  width:50%;
+  background:url('../images/imageforform.png') no-repeat center center;
+  background-size:cover;
+  box-shadow: 0 4px 2px -2px gray;
+}
+div.second-container form{
+  display:flex;
+  flex-direction:column;
+  margin:20px auto;
+  width:70%;
+
+
+}
+div.second-container form hr {
+  margin-top:10px;
+}
+
+div.second-container div.text {
+  margin-top:20px;
+  text-align:center;
+  color:#333333;
+
+}
+
+div.second-container form input[type="text"],
+[type="email"],
+select, textarea {
+  margin-bottom:10px;
+  height:30px;
+
+}
+
+div.second-container textarea {
+  height:150px;
+}
+
+div.second-container form input[type="submit"]{
+  position:absolute;
+  top:730px;
+  left:420px;
+  width:20%;
+  background-color:#474848;
+  color:white;
+  border-radius:20px;
+  font-family:'Fira Sans', sans-serif;
+  padding:10px;
+  font-size:1rem;
+}
